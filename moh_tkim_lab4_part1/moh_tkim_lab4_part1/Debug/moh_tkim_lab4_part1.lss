@@ -1,0 +1,317 @@
+
+moh_tkim_lab4_part1.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  000001b4  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000160  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  000001b4  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000001e4  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000030  00000000  00000000  00000224  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000008f8  00000000  00000000  00000254  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 0000082c  00000000  00000000  00000b4c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000002e6  00000000  00000000  00001378  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000044  00000000  00000000  00001660  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000400  00000000  00000000  000016a4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000126  00000000  00000000  00001aa4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000020  00000000  00000000  00001bca  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	4b c0       	rjmp	.+150    	; 0x9c <__bad_interrupt>
+   6:	00 00       	nop
+   8:	49 c0       	rjmp	.+146    	; 0x9c <__bad_interrupt>
+   a:	00 00       	nop
+   c:	47 c0       	rjmp	.+142    	; 0x9c <__bad_interrupt>
+   e:	00 00       	nop
+  10:	45 c0       	rjmp	.+138    	; 0x9c <__bad_interrupt>
+  12:	00 00       	nop
+  14:	43 c0       	rjmp	.+134    	; 0x9c <__bad_interrupt>
+  16:	00 00       	nop
+  18:	41 c0       	rjmp	.+130    	; 0x9c <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	3f c0       	rjmp	.+126    	; 0x9c <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	3d c0       	rjmp	.+122    	; 0x9c <__bad_interrupt>
+  22:	00 00       	nop
+  24:	3b c0       	rjmp	.+118    	; 0x9c <__bad_interrupt>
+  26:	00 00       	nop
+  28:	39 c0       	rjmp	.+114    	; 0x9c <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	37 c0       	rjmp	.+110    	; 0x9c <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	35 c0       	rjmp	.+106    	; 0x9c <__bad_interrupt>
+  32:	00 00       	nop
+  34:	33 c0       	rjmp	.+102    	; 0x9c <__bad_interrupt>
+  36:	00 00       	nop
+  38:	31 c0       	rjmp	.+98     	; 0x9c <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	2f c0       	rjmp	.+94     	; 0x9c <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	2d c0       	rjmp	.+90     	; 0x9c <__bad_interrupt>
+  42:	00 00       	nop
+  44:	2b c0       	rjmp	.+86     	; 0x9c <__bad_interrupt>
+  46:	00 00       	nop
+  48:	29 c0       	rjmp	.+82     	; 0x9c <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	27 c0       	rjmp	.+78     	; 0x9c <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	25 c0       	rjmp	.+74     	; 0x9c <__bad_interrupt>
+  52:	00 00       	nop
+  54:	23 c0       	rjmp	.+70     	; 0x9c <__bad_interrupt>
+  56:	00 00       	nop
+  58:	21 c0       	rjmp	.+66     	; 0x9c <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	1f c0       	rjmp	.+62     	; 0x9c <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	1d c0       	rjmp	.+58     	; 0x9c <__bad_interrupt>
+  62:	00 00       	nop
+  64:	1b c0       	rjmp	.+54     	; 0x9c <__bad_interrupt>
+  66:	00 00       	nop
+  68:	19 c0       	rjmp	.+50     	; 0x9c <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	17 c0       	rjmp	.+46     	; 0x9c <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	15 c0       	rjmp	.+42     	; 0x9c <__bad_interrupt>
+  72:	00 00       	nop
+  74:	13 c0       	rjmp	.+38     	; 0x9c <__bad_interrupt>
+  76:	00 00       	nop
+  78:	11 c0       	rjmp	.+34     	; 0x9c <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	0f c0       	rjmp	.+30     	; 0x9c <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	0d c0       	rjmp	.+26     	; 0x9c <__bad_interrupt>
+  82:	00 00       	nop
+  84:	0b c0       	rjmp	.+22     	; 0x9c <__bad_interrupt>
+  86:	00 00       	nop
+  88:	09 c0       	rjmp	.+18     	; 0x9c <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e4       	ldi	r29, 0x40	; 64
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+  98:	02 d0       	rcall	.+4      	; 0x9e <main>
+  9a:	60 c0       	rjmp	.+192    	; 0x15c <_exit>
+
+0000009c <__bad_interrupt>:
+  9c:	b1 cf       	rjmp	.-158    	; 0x0 <__vectors>
+
+0000009e <main>:
+{
+	return ((x & (0x01 << k)) != 0);
+}
+int main(void)
+{
+	DDRA = 0x00; PORTA = 0xFF;
+  9e:	11 b8       	out	0x01, r1	; 1
+  a0:	8f ef       	ldi	r24, 0xFF	; 255
+  a2:	82 b9       	out	0x02, r24	; 2
+	DDRC = 0xFF; PORTC = 0x00;
+  a4:	87 b9       	out	0x07, r24	; 7
+  a6:	18 b8       	out	0x08, r1	; 8
+	
+	unsigned char led = 0x00;
+  a8:	c0 e0       	ldi	r28, 0x00	; 0
+		//value
+		fuel = GetBit(button, 0) + 2*GetBit(button, 1) + 4*GetBit(button, 2) + 8*GetBit(button, 3);
+		
+		if((0 < fuel) && (fuel <= 2))		//set tmpC according to value of fuel
+		{
+			led = 0x60;
+  aa:	d0 e6       	ldi	r29, 0x60	; 96
+		}
+		else if((3 <= fuel) && (fuel <= 4))
+		{
+			led = 0x70;
+  ac:	10 e7       	ldi	r17, 0x70	; 112
+	unsigned char button = 0x00;
+	unsigned int fuel = 0;
+	
+	while(1)
+	{
+		button = ~PINA;						//declare variable fuel and read the value and convert to binary
+  ae:	80 b1       	in	r24, 0x00	; 0
+  b0:	80 95       	com	r24
+{
+	return (b ? x | (0x01 << k) : x & ~(0x01 << k));
+}
+unsigned char GetBit(unsigned char x, unsigned char k)
+{
+	return ((x & (0x01 << k)) != 0);
+  b2:	90 e0       	ldi	r25, 0x00	; 0
+	
+	while(1)
+	{
+		button = ~PINA;						//declare variable fuel and read the value and convert to binary
+		//value
+		fuel = GetBit(button, 0) + 2*GetBit(button, 1) + 4*GetBit(button, 2) + 8*GetBit(button, 3);
+  b4:	81 fb       	bst	r24, 1
+  b6:	66 27       	eor	r22, r22
+  b8:	60 f9       	bld	r22, 0
+  ba:	70 e0       	ldi	r23, 0x00	; 0
+  bc:	ab 01       	movw	r20, r22
+  be:	44 0f       	add	r20, r20
+  c0:	55 1f       	adc	r21, r21
+  c2:	9c 01       	movw	r18, r24
+  c4:	21 70       	andi	r18, 0x01	; 1
+  c6:	33 27       	eor	r19, r19
+  c8:	24 0f       	add	r18, r20
+  ca:	35 1f       	adc	r19, r21
+  cc:	82 fb       	bst	r24, 2
+  ce:	ee 27       	eor	r30, r30
+  d0:	e0 f9       	bld	r30, 0
+  d2:	f0 e0       	ldi	r31, 0x00	; 0
+  d4:	af 01       	movw	r20, r30
+  d6:	44 0f       	add	r20, r20
+  d8:	55 1f       	adc	r21, r21
+  da:	44 0f       	add	r20, r20
+  dc:	55 1f       	adc	r21, r21
+  de:	24 0f       	add	r18, r20
+  e0:	35 1f       	adc	r19, r21
+  e2:	83 fb       	bst	r24, 3
+  e4:	aa 27       	eor	r26, r26
+  e6:	a0 f9       	bld	r26, 0
+  e8:	b0 e0       	ldi	r27, 0x00	; 0
+  ea:	cd 01       	movw	r24, r26
+  ec:	88 0f       	add	r24, r24
+  ee:	99 1f       	adc	r25, r25
+  f0:	88 0f       	add	r24, r24
+  f2:	99 1f       	adc	r25, r25
+  f4:	88 0f       	add	r24, r24
+  f6:	99 1f       	adc	r25, r25
+  f8:	82 0f       	add	r24, r18
+  fa:	93 1f       	adc	r25, r19
+		
+		if((0 < fuel) && (fuel <= 2))		//set tmpC according to value of fuel
+  fc:	9c 01       	movw	r18, r24
+  fe:	21 50       	subi	r18, 0x01	; 1
+ 100:	31 09       	sbc	r19, r1
+ 102:	22 30       	cpi	r18, 0x02	; 2
+ 104:	31 05       	cpc	r19, r1
+ 106:	e8 f0       	brcs	.+58     	; 0x142 <main+0xa4>
+		{
+			led = 0x60;
+		}
+		else if((3 <= fuel) && (fuel <= 4))
+ 108:	22 50       	subi	r18, 0x02	; 2
+ 10a:	31 09       	sbc	r19, r1
+ 10c:	22 30       	cpi	r18, 0x02	; 2
+ 10e:	31 05       	cpc	r19, r1
+ 110:	d0 f0       	brcs	.+52     	; 0x146 <main+0xa8>
+		{
+			led = 0x70;
+		}
+		else if((5 <= fuel) && (fuel <= 6))
+ 112:	22 50       	subi	r18, 0x02	; 2
+ 114:	31 09       	sbc	r19, r1
+ 116:	22 30       	cpi	r18, 0x02	; 2
+ 118:	31 05       	cpc	r19, r1
+ 11a:	b8 f0       	brcs	.+46     	; 0x14a <main+0xac>
+		{
+			led = 0x38;
+		}
+		else if((7 <= fuel) && (fuel <= 9))
+ 11c:	22 50       	subi	r18, 0x02	; 2
+ 11e:	31 09       	sbc	r19, r1
+ 120:	23 30       	cpi	r18, 0x03	; 3
+ 122:	31 05       	cpc	r19, r1
+ 124:	a0 f0       	brcs	.+40     	; 0x14e <main+0xb0>
+		{
+			led = 0x3C;
+		}
+		else if((10 <= fuel) && (fuel <= 12))
+ 126:	23 50       	subi	r18, 0x03	; 3
+ 128:	31 09       	sbc	r19, r1
+ 12a:	23 30       	cpi	r18, 0x03	; 3
+ 12c:	31 05       	cpc	r19, r1
+ 12e:	88 f0       	brcs	.+34     	; 0x152 <main+0xb4>
+		{
+			led = 0x3E;
+		}
+		else if((13 <= fuel) && (fuel <= 15))
+ 130:	23 50       	subi	r18, 0x03	; 3
+ 132:	31 09       	sbc	r19, r1
+ 134:	23 30       	cpi	r18, 0x03	; 3
+ 136:	31 05       	cpc	r19, r1
+ 138:	70 f0       	brcs	.+28     	; 0x156 <main+0xb8>
+		{
+			led = 0x3F;
+		}
+		else if(0 == fuel)
+ 13a:	89 2b       	or	r24, r25
+ 13c:	69 f4       	brne	.+26     	; 0x158 <main+0xba>
+		{
+			led = 0x40;
+ 13e:	c0 e4       	ldi	r28, 0x40	; 64
+ 140:	0b c0       	rjmp	.+22     	; 0x158 <main+0xba>
+		//value
+		fuel = GetBit(button, 0) + 2*GetBit(button, 1) + 4*GetBit(button, 2) + 8*GetBit(button, 3);
+		
+		if((0 < fuel) && (fuel <= 2))		//set tmpC according to value of fuel
+		{
+			led = 0x60;
+ 142:	cd 2f       	mov	r28, r29
+ 144:	09 c0       	rjmp	.+18     	; 0x158 <main+0xba>
+		}
+		else if((3 <= fuel) && (fuel <= 4))
+		{
+			led = 0x70;
+ 146:	c1 2f       	mov	r28, r17
+ 148:	07 c0       	rjmp	.+14     	; 0x158 <main+0xba>
+		}
+		else if((5 <= fuel) && (fuel <= 6))
+		{
+			led = 0x38;
+ 14a:	c8 e3       	ldi	r28, 0x38	; 56
+ 14c:	05 c0       	rjmp	.+10     	; 0x158 <main+0xba>
+		}
+		else if((7 <= fuel) && (fuel <= 9))
+		{
+			led = 0x3C;
+ 14e:	cc e3       	ldi	r28, 0x3C	; 60
+ 150:	03 c0       	rjmp	.+6      	; 0x158 <main+0xba>
+		}
+		else if((10 <= fuel) && (fuel <= 12))
+		{
+			led = 0x3E;
+ 152:	ce e3       	ldi	r28, 0x3E	; 62
+ 154:	01 c0       	rjmp	.+2      	; 0x158 <main+0xba>
+		}
+		else if((13 <= fuel) && (fuel <= 15))
+		{
+			led = 0x3F;
+ 156:	cf e3       	ldi	r28, 0x3F	; 63
+		}
+		else if(0 == fuel)
+		{
+			led = 0x40;
+		}
+		PORTC = led;						//save tmpC to PORTC
+ 158:	c8 b9       	out	0x08, r28	; 8
+	}
+ 15a:	a9 cf       	rjmp	.-174    	; 0xae <main+0x10>
+
+0000015c <_exit>:
+ 15c:	f8 94       	cli
+
+0000015e <__stop_program>:
+ 15e:	ff cf       	rjmp	.-2      	; 0x15e <__stop_program>
