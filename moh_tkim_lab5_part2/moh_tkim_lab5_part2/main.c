@@ -1,9 +1,11 @@
 /*
- * moh008_lab5_part2.c
- *
- * Created: 2018-01-31 오후 8:37:23
- * Author : Lincoln
+ * Partner Name & E-mail: Taehyun Kim[tkim058@ucr.edu]
+ * Lab Section: B21
+ * Assignment: Lab #5 Exercise #2
+ * I acknowledge all content contained herein, excluding template
+	or example code, is my own original work.
  */ 
+
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include "Timer.c"
