@@ -148,7 +148,7 @@ int main(void)
 	
 	while(1)
 	{
-		button = ~PINA;						//declare variable fuel and read the value and convert to binary
+		button = ~PINA & 0xFF;						//declare variable fuel and read the value and convert to binary
   ae:	80 b1       	in	r24, 0x00	; 0
   b0:	80 95       	com	r24
 {
@@ -161,7 +161,7 @@ unsigned char GetBit(unsigned char x, unsigned char k)
 	
 	while(1)
 	{
-		button = ~PINA;						//declare variable fuel and read the value and convert to binary
+		button = ~PINA & 0xFF;						//declare variable fuel and read the value and convert to binary
 		//value
 		fuel = GetBit(button, 0) + 2*GetBit(button, 1) + 4*GetBit(button, 2) + 8*GetBit(button, 3);
   b4:	81 fb       	bst	r24, 1
