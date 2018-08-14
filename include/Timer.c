@@ -2,7 +2,6 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
-volatile unsigned char TimerFlag = 0;
 unsigned long _avr_timer_M = 1;//Start count from here, down to 0. Default 1ms
 unsigned long _avr_timer_cntcurr = 0;//Current internal count of 1ms ticks
 
