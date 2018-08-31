@@ -351,7 +351,7 @@ END GROUP
  *(.fini0)
                 0x000004d0                _etext = .
 
-.data           0x00800100       0x20 load address 0x000004d0
+.data           0x00800100       0x2c load address 0x000004d0
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -364,41 +364,40 @@ END GROUP
  *(.rodata)
  *(.rodata*)
  .rodata.str1.1
-                0x00800105       0x1a main.o
+                0x00800105       0x27 main.o
  *(.gnu.linkonce.r*)
-                0x00800120                . = ALIGN (0x2)
- *fill*         0x0080011f        0x1 
-                0x00800120                _edata = .
-                0x00800120                PROVIDE (__data_end, .)
+                0x0080012c                . = ALIGN (0x2)
+                0x0080012c                _edata = .
+                0x0080012c                PROVIDE (__data_end, .)
 
-.bss            0x00800120        0x9
-                0x00800120                PROVIDE (__bss_start, .)
+.bss            0x0080012c        0x9
+                0x0080012c                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
- .bss.cnt       0x00800120        0x1 main.o
-                0x00800120                cnt
- .bss.button    0x00800121        0x1 main.o
-                0x00800121                button
- .bss.tmpB      0x00800122        0x1 main.o
-                0x00800122                tmpB
+ .bss.cnt       0x0080012c        0x1 main.o
+                0x0080012c                cnt
+ .bss.button    0x0080012d        0x1 main.o
+                0x0080012d                button
+ .bss.tmpB      0x0080012e        0x1 main.o
+                0x0080012e                tmpB
  .bss._avr_timer_cntcurr
-                0x00800123        0x4 main.o
-                0x00800123                _avr_timer_cntcurr
+                0x0080012f        0x4 main.o
+                0x0080012f                _avr_timer_cntcurr
  .bss.TimerFlag
-                0x00800127        0x1 main.o
-                0x00800127                TimerFlag
+                0x00800133        0x1 main.o
+                0x00800133                TimerFlag
  *(COMMON)
- COMMON         0x00800128        0x1 main.o
-                0x00800128                state
-                0x00800129                PROVIDE (__bss_end, .)
+ COMMON         0x00800134        0x1 main.o
+                0x00800134                state
+                0x00800135                PROVIDE (__bss_end, .)
                 0x000004d0                __data_load_start = LOADADDR (.data)
-                0x000004f0                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x000004fc                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800129        0x0
+.noinit         0x00800135        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x00800129                _end = .
+                0x00800135                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0

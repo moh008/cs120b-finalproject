@@ -185,7 +185,7 @@ void Tick()
 		}
 		else if(score == 0x00)
 		{
-			LCD_DisplayString(1, "WAKE UP, HELLO???");
+			LCD_DisplayString(1, "WAKE UP, HELLO???             ");
 		}
 		break;
 		

@@ -9,10 +9,10 @@
           
 /*-------------------------------------------------------------------------*/
 
-#define DATA_BUS PORTC		// port connected to pins 7-14 of LCD display
-#define CONTROL_BUS PORTD	// port connected to pins 4 and 6 of LCD disp.
-#define RS 6			// pin number of uC connected to pin 4 of LCD disp.
-#define E 7			// pin number of uC connected to pin 6 of LCD disp.
+#define DATA_BUS PORTD		// port connected to pins 7-14 of LCD display
+#define CONTROL_BUS PORTC	// port connected to pins 6 and 7 of LCD disp.
+#define RS 6				// pin number of uC connected to pin 0 of LCD disp.
+#define E 7					// pin number of uC connected to pin 1 of LCD disp.
 
 /*-------------------------------------------------------------------------*/
 
@@ -62,9 +62,9 @@ void LCD_Cursor(unsigned char column) {
    if ( column < 17 ) { // 16x1 LCD: column < 9
 						// 16x2 LCD: column < 17
       LCD_WriteCommand(0x80 + column - 1);
-   } else {
-      LCD_WriteCommand(0xB8 + column - 9);	// 16x1 LCD: column - 1
-											// 16x2 LCD: column - 9
+   }
+   else{
+	   LCD_WriteCommand(0xB8 + column -9);//row control
    }
 }
 
